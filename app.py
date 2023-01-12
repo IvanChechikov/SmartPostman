@@ -143,9 +143,9 @@ def work():
 
                         elif req["request"]["original_utterance"].lower().strip() == "тема письма":
                             response["response"]["text"] = "Придумайте тему письма, сказав, 'тема'...," \
-                                                           " а дальше только полет вашей мысли"
+                                                           " а дальше только полёт вашей мысли"
                             response["response"]["tts"] = "Прид+умайте т+ему письм+а, сказав, т+ема...," \
-                                                          " а д+альше т+олько пол+ет в+ашей м+ысли"
+                                                          " а д+альше т+олько пол+ёт в+ашей м+ысли"
                             response_texts.append(response["response"]["text"])
                             response_ttss.append(response["response"]["tts"])
 
@@ -167,9 +167,9 @@ def work():
 
                         elif req["request"]["original_utterance"].lower().strip() == "текст письма":
                             response["response"]["text"] = "Придумайте текст письма, сказав, 'текст'...," \
-                                                           " а дальше только полет вашей мысли"
+                                                           " а дальше только полёт вашей мысли"
                             response["response"]["tts"] = "Прид+умайте текст письм+а, сказ+ав, текст..." \
-                                                          " а д+альше т+олько пол+ет в+ашей м+ысли"
+                                                          " а д+альше т+олько пол+ёт в+ашей м+ысли"
                             response_texts.append(response["response"]["text"])
                             response_ttss.append(response["response"]["tts"])
 
