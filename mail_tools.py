@@ -70,6 +70,7 @@ def get_email_address_list(access_token: str, sender_email: str) -> list:
         elif messages < 30:
             messages_count = messages
         while messages_count:
+            messages_count -= 1
             res, msg = imap.fetch(str(messages - messages_count), "(RFC822)")
             for response in msg:
                 if isinstance(response, tuple):
@@ -87,7 +88,6 @@ def get_email_address_list(access_token: str, sender_email: str) -> list:
                                 .replace(">", "").replace(" ", "")
                             sender_email = sender_email.lower()
                             email_address_list.append(sender_name + ":" + sender_email)
-            messages_count-=1                    
             
         imap.close()
         imap.logout()
@@ -134,6 +134,5 @@ def get_email_obj_text(email_obj_text: str, email_obj_type: str) -> str:
         phrase = phrase.strip()
         phrase = phrase.capitalize()
         text_list.append(phrase)
-    email_obj_text = "".join(text_list)
+    email_obj_text = " ".join(text_list)
     return email_obj_text
-  
